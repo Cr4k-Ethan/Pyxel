@@ -1,0 +1,420 @@
+/* Import des polices d'écriture */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Merriweather:wght@400;700&display=swap');
+
+/* Styles globaux */
+body {
+    font-family: 'Open Sans', sans-serif; /* Police principale pour le texte */
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+
+header {
+    background-color: #1c1c1c;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+header .logo span {
+    font-family: 'Merriweather', serif; /* Police pour le logo */
+    font-weight: 700;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #e0e0e0; /* Gris clair pour le texte des liens */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #8bafda; /* Bleu clair pour le survol */
+}
+
+main {
+    padding: 2rem;
+}
+
+#presentation {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 800px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#presentation p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 1rem;
+}
+
+/* Articles */
+#articles, #reviews {
+    text-align: center;
+}
+
+#articles h2, #reviews h2 {
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.article {
+    background-color: #1e1e1e;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 30%;
+    margin-bottom: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.article img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.article h3 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Contact Form */
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+form {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 800px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+button {
+    background-color: #002f6c;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1a3c73;
+}
+
+#form-result {
+    margin-top: 1rem;
+}
+
+/* Article */
+#article {
+    width: 80%; /* Réduit la largeur à 80% de la fenêtre */
+    max-width: 1000px; /* Limite la largeur maximale */
+    margin: 2rem auto; /* Réduit la marge */
+    padding: 1rem; /* Réduit le padding */
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden; /* Assure que le contenu ne dépasse pas les bords */
+}
+
+.article-header {
+    text-align: center;
+}
+
+.article-banner {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.article-content {
+    text-align: left;
+}
+
+.rating-section {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+/* Conteneur pour les notes */
+.ratings-container {
+    display: flex;                /* Utilise flexbox pour aligner les éléments horizontalement */
+    justify-content: space-between; /* Espace égal entre les éléments */
+    gap: 1rem;                    /* Espacement entre les éléments */
+    flex-wrap: wrap;              /* Permet aux éléments de passer à la ligne suivante si l'espace est insuffisant */
+}
+
+/* Style pour chaque note */
+.rating {
+    display: flex;
+    flex-direction: column;       /* Aligne les éléments dans une colonne (titre + barre) */
+    align-items: center;          /* Centre les éléments horizontalement */
+    width: 30%;                    /* Ajuste la largeur pour qu'ils soient alignés correctement */
+}
+
+/* Style pour le titre de la note */
+.rating-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+/* Barre de notation pour les sous-notes */
+.sub-rating-bar {
+    position: relative;
+    width: 100%;                  /* Prend toute la largeur disponible du conteneur */
+    height: 20px;
+    background-color: #2d2d2d;
+    border-radius: 10px;
+}
+
+.sub-rating-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #8bafda;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out; /* Transition pour un effet plus doux */
+}
+
+.sub-rating-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.9rem;
+    color: #fff;
+    z-index: 1; /* Assure que le texte est au-dessus de la barre remplie */
+}
+
+.rating-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.circle-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2d2d2d;
+    border-radius: 50%;
+}
+
+.circle-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #8bafda;
+    border-radius: 50%;
+    clip: rect(0px, 100px, 100px, 50px);
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.circle-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-text {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* Barre de notation pour les sous-notes */
+.sub-ratings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.sub-rating {
+    margin-bottom: 1rem;
+}
+
+.sub-rating-bar {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    background-color: #2d2d2d;
+    border-radius: 10px;
+}
+
+.sub-rating-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #8bafda;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+footer {
+    background-color: #1c1c1c;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Style général pour le tableau */
+.review-summary {
+    width: 100%;
+    border-collapse: collapse; /* Fusionne les bordures pour éviter les espaces */
+    margin-top: 20px;
+    color: #e0e0e0; /* Couleur du texte */
+    font-family: 'Roboto', sans-serif; /* Application de la police */
+}
+
+.review-summary th,
+.review-summary td {
+    border: 1px solid #333; /* Bordure gris très foncé */
+    padding: 10px;
+    text-align: center; /* Centre le texte */
+    background-color: #1e1e1e; /* Fond sombre pour toutes les cellules */
+}
+
+.review-summary th {
+    background-color: #121212; /* Fond plus foncé pour les en-têtes */
+    color: #e0e0e0; /* Texte clair pour les en-têtes */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem; /* Taille de police des en-têtes */
+}
+
+.review-summary td {
+    border-radius: 4px; /* Coins arrondis */
+    font-size: 0.9rem; /* Taille de police des cellules */
+}
+
+.review-summary tr:hover td {
+    background-color: #2a2a2a; /* Fond légèrement plus clair au survol */
+}
+
+.review-summary thead th {
+    border-bottom: 2px solid #333; /* Bordure plus épaisse en bas des en-têtes */
+}
+
+.review-summary th, .review-summary td {
+    width: 33.33%; /* Assure que chaque colonne ait la même largeur */
+}
